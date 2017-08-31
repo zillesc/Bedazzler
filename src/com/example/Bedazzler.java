@@ -2,6 +2,8 @@ package com.example;
 
 public class Bedazzler {
 
+    private static final String DELIMITER = "*";
+
     public static void main(String[] args) {
         System.out.println(bedazzle("This is my string"));
     }
@@ -12,7 +14,7 @@ public class Bedazzler {
         for (int i = 0; i < inputStr.length(); i++) {
 
             // Put a * in front of every character
-            outputStr += "*";
+            outputStr += DELIMITER;
 
             char currentChar = inputStr.charAt(i);
 
@@ -26,7 +28,7 @@ public class Bedazzler {
         }
 
         // Add a trailing *
-        outputStr += "*";
+        outputStr += DELIMITER;
 
         return outputStr;
     }
