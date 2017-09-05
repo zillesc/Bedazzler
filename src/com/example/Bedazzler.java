@@ -27,8 +27,10 @@ public class Bedazzler {
             }
         }
 
-        // Add a trailing *
-        outputStr += DELIMITER;
+        // If ends with non-space, then add a trailing *
+        if (inputStr.charAt(inputStr.length() - 1) != ' ') {
+            outputStr += DELIMITER;
+        }
 
         return outputStr;
     }
