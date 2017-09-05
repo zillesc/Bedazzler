@@ -11,6 +11,10 @@ public class Bedazzler {
     public static String bedazzle(String inputStr) {
         String outputStr = "";
 
+        if (inputStr == null) {
+            return "";
+        }
+
         for (int i = 0; i < inputStr.length(); i++) {
 
             // Put a * in front of every character

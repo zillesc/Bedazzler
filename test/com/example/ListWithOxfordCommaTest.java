@@ -10,6 +10,11 @@ import static org.junit.Assert.*;
 public class ListWithOxfordCommaTest {
 
     @Test
+    public void nullList() throws Exception {
+        assertEquals("", ListWithOxfordComma.toString(null));
+    }
+
+    @Test
     public void noItemList() throws Exception {
         assertEquals("", ListWithOxfordComma.toString(new String[0]));
     }
@@ -33,6 +38,7 @@ public class ListWithOxfordCommaTest {
     @Test
     public void manyItemList() throws Exception {
         assertEquals("Item1, Item2, Item3, Item4, Item5, Item6, and Item7",
-                ListWithOxfordComma.toString(new String[]{"Item1", "Item2", "Item3", "Item4", "Item5", "Item6", "Item7"}));
+                ListWithOxfordComma.toString(new String[]{"Item1", "Item2", "Item3", "Item4",
+                        "Item5", "Item6", "Item7"}));
     }
 }
